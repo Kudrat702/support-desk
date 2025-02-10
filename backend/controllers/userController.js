@@ -21,7 +21,7 @@ const registerUser = asyncHandler(async (req, res) => {
     const userExits = await User.findOne({ email });
 
     if(userExits) {
-         res.status(400)
+      res.status(400)
          throw new Error('User already exits')
         
     }
